@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.item {
+  --progress: 0;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 135px;
+  min-height: 135px;
+  aspect-ratio: 1/1;
+}
+
+.item svg {
+  pointer-events: none;
+  position: absolute;
+  inset: 0px;
+}
+
+.item .progressBorder {
+  stroke-dasharray: 296px;
+  stroke-dashoffset: calc(296px - (296px * (var(--progress) / 100)));
+  stroke: var(--secondary-color);
+}
+
+@media screen and (min-width:920px) {
+  .container {
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

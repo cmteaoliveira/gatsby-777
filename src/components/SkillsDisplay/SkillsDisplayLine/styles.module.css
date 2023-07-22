@@ -1,0 +1,23 @@
+.skills-container {
+  width: 100%;
+}
+
+.item {
+  --progress: 0;
+  --label-width: 100px;
+
+  display: grid;
+  grid-template-columns: var(--label-width) 1fr;
+  align-items: center;
+  text-align: initial;
+}
+
+.item::after {
+  --progress-percent: calc(var(--progress) * 1%);
+
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--secondary-color) 0% var(--progress-percent), var(--primary-color) var(--progress-percent) 100%);
+}

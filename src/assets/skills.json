@@ -1,0 +1,17 @@
+{
+  "programming": {
+    "HTML": 90,
+    "CSS": 95,
+    "JavaScript": 40,
+    "jQuery": 50,
+    "NodeJS": 35,
+    "VueJS": 45,
+    "PHP": 20
+  },
+  "software": {
+    "Photoshop": 94,
+    "Illustrator": 80,
+    "Sublime Text": 89,
+    "Dreamweaver": 55
+  }
+}

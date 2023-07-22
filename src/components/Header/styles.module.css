@@ -1,0 +1,21 @@
+.header-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 250px;
+  gap: 10px;
+}
+
+.header-container h1,
+.header-container h2 {
+  margin: 0;
+}
+
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}

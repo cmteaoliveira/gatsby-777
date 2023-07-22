@@ -1,0 +1,23 @@
+.text.primary-color {
+  color: var(--primary-color);
+}
+
+.text.secondary-color {
+  color: var(--secondary-color);
+}
+
+.text.title {
+  font-size: var(--text-title);
+}
+
+.text.subtitle {
+  font-size: var(--text-subtitle);
+}
+
+.text.paragraph {
+  font-size: var(--text-paragraph);
+}
+
+.text.uppercase {
+  text-transform: uppercase;
+}

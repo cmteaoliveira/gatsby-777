@@ -1,0 +1,137 @@
+.projects-container {
+  position: relative;
+  width: 100%;
+}
+
+.projects-list {
+  overflow: hidden;
+  display: flex;
+  gap: 40px;
+  
+  margin: 0;
+  padding: 0;
+
+  transition: transform 250ms ease-in-out;
+}
+
+.project-img {
+  width: 280px;
+  height: 404px;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 200px;
+  z-index: 10;
+  width: 50px;
+  height: 75px;
+  transform: translateY(-50%);
+
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: invert(1%);
+  border: none;
+
+  transition: 250ms ease-in-out;
+  transition-property: opacity, background-color;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  cursor: pointer;
+  background: rgba(255, 4, 103, 0.4);
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+  opacity: 0;
+}
+
+.prev-btn {
+  left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.prev-btn > img {
+ transform: rotateZ(180deg); 
+}
+
+.next-btn {
+  right: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+
+
+.project-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 404px;
+  background: var(--background-color);
+
+  display: grid;
+  grid-template-columns: 640px 1fr;
+  gap: 40px;
+}
+
+.detailed-project-img {
+  width: 640px;
+}
+
+.close-detail-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  width: 50px;
+  height: 50px;
+  line-height: 0;
+  transition: background-color 250ms ease-in-out;
+}
+
+.close-detail-btn > img {
+  transform: rotateZ(180deg);
+}
+
+.close-detail-btn:hover {
+  cursor: pointer;
+  background: rgba(255, 4, 103, 0.4);
+}
+
+
+
+.selection-btn {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: initial;
+}
+
+.selection-btn:hover {
+  cursor: pointer;
+}
+
+.selection-btn > span {
+  display: block;
+  margin-top: 20px;
+}
+
+.selection-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transition: background-color 250ms ease-in-out;
+}
+
+.selection-btn:focus::after,
+.selection-btn:hover::after {
+   background: rgba(255, 4, 103, 0.4);
+}

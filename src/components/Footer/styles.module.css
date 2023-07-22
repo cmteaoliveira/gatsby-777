@@ -1,0 +1,20 @@
+.footer-container {
+  margin-top: 35px;
+  padding: 10px 0;
+  
+  background: #39393F;
+  backdrop-filter: blur(35px);
+}
+
+.footer-container > div {
+  max-width: 920px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width:920px) {
+  .footer-container > div {
+    justify-content: flex-end;
+  }
+}

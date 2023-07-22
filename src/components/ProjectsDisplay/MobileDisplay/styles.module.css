@@ -1,0 +1,72 @@
+.projects-container {
+  position: relative;
+  width: 350px;
+
+  overflow: hidden;
+}
+
+.projects-list {
+  --on-display-index: 0;
+  --card-width-and-gap: calc(350px + 35px);
+
+  display: flex;
+  gap: 35px;
+  
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  transform: translateX(calc(var(--on-display-index) * var(--card-width-and-gap) * -1));
+  transition: transform 250ms ease-in-out;
+}
+
+.project-img {
+  width: 350px;
+  height: 404px;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 200px;
+  width: 50px;
+  height: 75px;
+  transform: translateY(-50%);
+
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: invert(1%);
+  border: none;
+
+  transition: 250ms ease-in-out;
+  transition-property: opacity, background-color;
+}
+
+.prev-btn:focus,
+.prev-btn:hover,
+.next-btn:focus,
+.next-btn:hover {
+  background: rgba(255, 4, 103, 0.4);
+  cursor: pointer;
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.prev-btn {
+  left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.prev-btn > img {
+ transform: rotateZ(180deg); 
+}
+
+.next-btn {
+  right: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}

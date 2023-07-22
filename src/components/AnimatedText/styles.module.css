@@ -1,0 +1,32 @@
+.container.subtitle {
+  font-size: var(--text-subtitle);
+}
+
+.container.paragraph {
+  font-size: var(--text-paragraph);
+}
+
+.letters {
+  --letter-position: 0;
+
+  color: #faebd7;
+
+  animation: lightWaveText 1s ease-in-out infinite alternate;
+  animation-delay: calc(var(--letter-position) * 100ms);
+}
+
+.letters + .letters {
+  margin-left: 0.1em;
+}
+
+.letters:hover {
+  display: inline-block;
+  transform: scale(1.2);
+}
+
+@keyframes lightWaveText {
+  to {
+    text-shadow: 20px 0 70px var(--secondary-color);;
+    color: var(--secondary-color);;
+  }
+}
